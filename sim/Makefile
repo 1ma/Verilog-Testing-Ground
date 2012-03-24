@@ -21,8 +21,12 @@ LIB    = vtg
 INC    = +incdir+../rtl
 VFLAGS = -work $(LIB) -lint
 
-VTG_MODS    = vtg_mux
-SIM_MODS    = vtg_mux_test
+VTG_MODS    = vtg_mux \
+              vtg_register
+              
+SIM_MODS    = vtg_register_test \
+              vtg_mux_test
+              
 
 SYS_MODS    = $(VTG_MODS) \
               $(SIM_MODS)

@@ -1,3 +1,4 @@
+// Ultra simple 1bit multiplex0r
 
 module vtg_mux(
         input x,
