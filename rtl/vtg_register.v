@@ -21,13 +21,10 @@ always @ (posedge clk) begin
     if (rst) begin
         dataout <= RST_VAL;
     end
-    
-end
-
-always @ (posedge clk) begin
-    if (we) begin
+    else if (we) begin
         dataout <= datain;
     end
+    
 end
 
 endmodule
