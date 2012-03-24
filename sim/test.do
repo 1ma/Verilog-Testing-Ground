@@ -5,14 +5,16 @@ make
 
 # Supresses message 3009 about timescale directives
 # and message 7 about not finding appropiate ROMs for init
-vsim -t ns -suppress 3009
+vsim -t ns -suppress 3009 vtg.vtg_mux_test
 
 
 
-add wave -divider x
+add wave -divider inputs
 add wave -label x   -hex x
-
-add wave -divider y
 add wave -label y   -hex y
+add wave -label sel -hex sel
 
-run 10us
+add wave -divider output
+add wave -label z   -hex z
+
+run 1000ns

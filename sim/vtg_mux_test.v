@@ -35,15 +35,18 @@ module vtg_mux_test;
 
     initial
     begin
+    
+    // 0 ns
         x <= 1'b0;
         y <= 1'b0;
         sel <= 1'b0;
-         
+    
+    // 50 ns
     #5  x <= 1'b1;
     
+    // 100 ns
     #5  sel <= 1'b1;
     
-    #5  sel <= 1'b0;
     end
 
 endmodule
